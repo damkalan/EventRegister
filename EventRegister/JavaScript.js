@@ -1,8 +1,9 @@
-﻿var eventRegister = angular.module('EventRegister', ['ui.bootstrap']);
+﻿var eventRegister = angular.module('EventRegister', ['ui.bootstrap', 'ngResource']);
 
-eventRegister.controller("EventRegisterController", function ($scope) {
-    $scope.persons = [
-        { 'FirstName': 'Kolpan', 'LastName': 'Lopertket', 'MiddleInitial' : 'B', 'PhoneNumber':'458-698-756', 'AgeGroup': '2' },
-        { 'FirstName': 'Polod', 'LastName': 'Moerlokuse', 'MiddleInitial': 'F', 'PhoneNumber': '254-657-458', 'AgeGroup': '2' }
-    ];
+eventRegister.factory('PersonList', function ($resource) {
+    return new $resource('/api/EventRegister');
+});
+
+eventRegister.controller("EventRegisterController", function ($scope, PersonList) {
+    $scope.persons = PersonList.query();
 });
