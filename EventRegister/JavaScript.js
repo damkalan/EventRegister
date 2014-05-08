@@ -1,0 +1,1 @@
+﻿angular.module('rootModule', ['ui.bootstrap']);
