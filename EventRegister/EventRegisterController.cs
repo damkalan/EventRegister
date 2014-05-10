@@ -24,8 +24,9 @@ namespace EventRegister
         }
 
         // POST api/<controller>
-        public void Post([FromBody]string value)
+        public void Post(PersonViewModel person)
         {
+            eventRegisterService.save(person);
         }
 
         // PUT api/<controller>/5

@@ -90,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EventRegisterController.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Service\PersonViewModel.cs" />
     <Compile Include="Service\EventRegisterService.cs" />
     <Compile Include="Global.asax.cs">

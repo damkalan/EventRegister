@@ -5,15 +5,20 @@
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body ng-controller="EventRegisterController">
-
+    
     <div ng-repeat="person in persons">
-        <p>First Name: {{person.FirstName}}</p>
-        <p>Last Name: {{person.LastName}}</p>
-    </div>
+        <label>First Name:</label>
+        <input value="{{person.FirstName}}" ng-model="person.FirstName" />
 
+        <label>Last Name:</label>
+        <input type="text" value="{{person.LastName}}" ng-model="person.LastName" />
+
+        <button type="submit" ng-click="save(person)">Save</button>
+    </div>
+    
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.min.js"></script>
     <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.js"></script>
-    <script src="JavaScript.js?version=2.0"></script>
+    <script src="JavaScript.js?version=2.1"></script>
 </body>
 </html>
