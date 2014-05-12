@@ -7,7 +7,7 @@ namespace EventRegister.Tests
     public class UnitTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestMethod()
         {
         }
     }
