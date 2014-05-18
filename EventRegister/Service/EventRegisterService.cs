@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using EventRegister.Data;
 
 namespace EventRegister
 {
@@ -40,6 +41,27 @@ namespace EventRegister
 
         public void save(PersonViewModel person)
         {
+            try
+            {
+                using (var db = new EventRegisterContext())
+                {
+                    db.Persons.Add(new Person
+                    {
+                        FirstName = "Fnamesl",
+                        LastName = "Lasderge",
+                        MiddleInitial = "M",
+                        PhoneNumber = "123-456-7890",
+                        AgeGroup = "2",
+                        ID = "1"
+                    });
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
             personStore.Add(new Person { 
                 FirstName = person.FirstName,
                 LastName = person.LastName
