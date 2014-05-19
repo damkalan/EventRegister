@@ -102,6 +102,15 @@
     <Compile Include="Data\EventRegisterContext.cs" />
     <Compile Include="EventRegisterController.cs" />
     <Compile Include="Data\Person.cs" />
+    <Compile Include="Migrations\201405181419372_InitialCreate.cs" />
+    <Compile Include="Migrations\201405181419372_InitialCreate.Designer.cs">
+      <DependentUpon>201405181419372_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405182238242_UpdateToInt.cs" />
+    <Compile Include="Migrations\201405182238242_UpdateToInt.Designer.cs">
+      <DependentUpon>201405182238242_UpdateToInt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Service\PersonViewModel.cs" />
     <Compile Include="Service\EventRegisterService.cs" />
     <Compile Include="Global.asax.cs">
@@ -109,7 +118,14 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201405181419372_InitialCreate.resx">
+      <DependentUpon>201405181419372_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405182238242_UpdateToInt.resx">
+      <DependentUpon>201405182238242_UpdateToInt.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
