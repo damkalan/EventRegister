@@ -55,33 +55,17 @@ namespace EventRegister
         {
             try
             {
-                //TODO: check saving
-
-                //int newID = 3;
-
                 using (var db = new EventRegisterContext())
                 {
-                    // newID = db.Persons.Count() + 1;
-
                     var p = new Person() {
                         FirstName = person.FirstName,
                         LastName = person.LastName,
                         MiddleInitial = "M",
                         PhoneNumber = "123-456-7890",
-                        AgeGroup = "2",
-                        ID = 3                    
+                        AgeGroup = "2"              
                     };
 
                     db.Persons.Add(p);
-                    //db.Persons.Add(new Person
-                    //{
-                    //    FirstName = person.FirstName,
-                    //    LastName = person.LastName,
-                    //    MiddleInitial = "M",
-                    //    PhoneNumber = "123-456-7890",
-                    //    AgeGroup = "2",
-                    //    ID = newID
-                    //});
                     db.SaveChanges();
                 }
             }

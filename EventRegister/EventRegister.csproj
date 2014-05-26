@@ -84,6 +84,7 @@
     <Content Include="App_Data\EventRegister.Data.EventRegisterContext_log.ldf">
       <DependentUpon>EventRegister.Data.EventRegisterContext.mdf</DependentUpon>
     </Content>
+    <Content Include="Migrations\UptatedToIdentity.sql" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -110,6 +111,10 @@
     <Compile Include="Migrations\201405182238242_UpdateToInt.Designer.cs">
       <DependentUpon>201405182238242_UpdateToInt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201405261333491_UpdatedToIdentity.cs" />
+    <Compile Include="Migrations\201405261333491_UpdatedToIdentity.Designer.cs">
+      <DependentUpon>201405261333491_UpdatedToIdentity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Service\PersonViewModel.cs" />
     <Compile Include="Service\EventRegisterService.cs" />
@@ -124,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201405182238242_UpdateToInt.resx">
       <DependentUpon>201405182238242_UpdateToInt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405261333491_UpdatedToIdentity.resx">
+      <DependentUpon>201405261333491_UpdatedToIdentity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
